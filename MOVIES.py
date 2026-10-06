@@ -60,3 +60,5 @@ movies = [
  "Uri: The Surgical Strike", "Gully Boy", "Chhichhore", "Kabir Singh", "Super 30", "Tanhaji", "Sooryavanshi", "Shershaah", "83", 
  "Gangubai Kathiawadi", "RRR", "KGF Chapter 2", "Bhool Bhulaiyaa 2", "Brahmastra", "Drishyam 2", "Pathaan", "Jawan", "Animal", "Gadar 2", 
  "Dunki" ]
+
+movies= [movie.lower() for movie in movies]

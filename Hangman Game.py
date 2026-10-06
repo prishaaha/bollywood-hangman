@@ -57,7 +57,7 @@ def display_ans(answer):
 def main():
     print("Welcome to BOLLYWOOD Hangman!")
     answer = word 
-    hint = ["_"] * len(answer)
+    hint = [" " if char == " " else "_" for char in answer]
     wrong_guesses = 0
     guessed_letters = set()
     is_running = True
@@ -76,6 +76,7 @@ def main():
             continue
 
         guessed_letters.add(guess)
+        print(f"Guesses: {' '.join(guessed_letters)}")
 
         if guess in answer:
             for i in range(len(answer)):
@@ -97,7 +98,7 @@ def main():
             display_hangman(wrong_guesses)
             display_ans(answer)
             print("GAME OVER!!YOU LOSE!")
-            print(f"You've run out of guesses. The word was '{answer}'.")
+            print(f"The word was '{answer}'.")
             is_running = False
 
 
